@@ -1,4 +1,7 @@
 #import numbers
-from numbers import*
+# print(numbers.factorial(5))
 
-print(factorial(5))
+from numbers import factorial as fa, fibonacci as fi
+
+print(fa(5))
+print(fi(8))
