@@ -1,0 +1,33 @@
+{% extends 'frontend/base.html' %}
+{%block title%}home{% endblock%}
+{% block content  %}
+ <div class="jumbotron">
+     <h1 class="display-3">Jumbo heading</h1>
+     <p class="lead">Jumbo helper text</p>
+     <hr class="my-2">
+     <p>More info</p>
+     <p class="lead">
+         <a class="btn btn-primary btn-lg" href="Jumbo action link" role="button">Jumbo action name</a>
+     </p>
+ </div>
+ <div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>name</th>
+                <th>detail</th>
+                <th>qty</th>
+            </tr>
+        </thead>
+        <tbody>
+           {% for data in product %}
+            <tr>
+                <td scope="row">{{data.product_name}}</td>
+                <td>{{data.product_detail}}</td>
+                <td>{{data.product_name}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>    
+ </div>
+{% endblock  %}
